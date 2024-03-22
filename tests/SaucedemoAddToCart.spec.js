@@ -12,7 +12,7 @@ let password = "secret_sauce";
 test('Sauce Demo Add To Cart', async ({page}) => {
 
     await login(page,expect,username, password);
-    await expect((await page.locator('.inventory_item').all()).length).toBe(6);
+    await expect(page.locator('.inventory_item')).toHaveCount(6)
 
 });
 
