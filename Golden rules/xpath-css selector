@@ -1,0 +1,11 @@
+css id = #id
+css class = .class
+xpath = //tagName[@attribute='value']
+css = tagName[attribute='value']
+xpath = //tagName[@id='value']
+css = tagName#value
+xpath = //tagName[@class='value']
+css = tagName.value
+
+xpath is dedication
+css is liner
