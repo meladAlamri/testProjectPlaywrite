@@ -36,7 +36,7 @@ async function login(page,expect,username, password) {
     await page.locator('#user-name').fill(username);
     await page.locator('#password').fill(password);
     await page.locator('#login-button').click();
-    await expect(page).toHaveURL("https://www.saucedemo.com/v1/inventory.html");
+    await page.waitForURL('**/inventory.html');
 }
 
 async function addToCart(page,item1,item2 ) {
