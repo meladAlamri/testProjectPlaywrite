@@ -1,0 +1,35 @@
+xpath => path of the element in the page DOM
+how to traverse the page DOM tree to find the needed element
+Golden Formula (Relative Xpath):***************
+//tagName[@attribute='value']
+
+Index:******
+(//tagName[@attribute='value'])[1]
+
+contains():******
+//tagName[contains(@attribute,'value')]
+
+starts-with():
+//tagName[starts-with(@attribute,'value')]
+
+text():
+//tagName[text()='value']
+
+.:
+//tagName[.='value']
+//tagName[contains(.,'value')]
+
+or:
+//tagName[@attribute='value' or @attribute='value2']
+
+and:
+//tagName[@attribute='value'][@attribute2='value2']
+//tagName[@attribute='value' and @attribute2='value2']
+
+any:
+//*[@attribute='value']
+
+--> never use right-click copy xpath
+--> never use the index unless explicitly stated
+--> never use class equals if there are multiple class names
+--> never use text if the web application supports multiple languages
