@@ -12,40 +12,37 @@ import {test} from '@playwright/test';
  */
 
 let url = "https://kitchen.applitools.com/ingredients/cookie";
-test('Cookies', async ({page}) => {
+test('Cookies', async ({page,context}) => {
 
     await page.goto(url);
 
     //print the total number of cookies
-    let cookies = (await page.context().cookies());
+    let cookies = (await context.cookies());
     console.log("The total number of cookies " + cookies.length);
 
     //add a new "fruit=apple" cookie
     let cookie = add_edit_cookie("fruit", "apple");
-    await page.context().addCookies([cookie]);
-    cookies = await page.context().cookies();
+    await context.addCookies([cookie]);
+    cookies = await context.cookies();
     printCookies(cookies)
 
     //edit the "protein" cookie to have the value "meat"
     cookie = add_edit_cookie("protein", "meat")
-    await page.context().addCookies([cookie]);
-    cookies = await page.context().cookies();
+    await context.addCookies([cookie]);
+    cookies = await context.cookies();
     printCookies(cookies)
 
     //delete the "vegetable" cookie
-    let index = cookies.findIndex(cookie => cookie.name === "vegetable")
-    await page.context().clearCookies();
-    for (let i = 0; i < cookies.length; i++) {
-        if (i !== index) {
-            await page.context().addCookies([cookies.at(i)])
-        }
-    }
-    cookies = await page.context().cookies();
+    let filteredCookies = (await context.cookies())
+        .filter((cookie) => cookie.name !== "vegetable")
+    await context.clearCookies();
+    await context.addCookies(filteredCookies)
+    cookies = context.cookies();
     printCookies(cookies)
 
     //delete all cookies
-    await page.context().clearCookies();
-    cookies = await page.context().cookies();
+    await context.clearCookies();
+    cookies = await context.cookies();
     printCookies(cookies)
 
 });
