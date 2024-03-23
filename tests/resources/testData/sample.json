@@ -1,0 +1,45 @@
+{
+  "searchQuery": "Selenium WebDriver",
+  "SoftAssertionsTestData": {
+    "username": "student",
+    "password": "password123"
+  },
+  "SauceDomeLoginTestData": {
+    "case1": {
+      "username": "standard_user",
+      "password": "secret_sauce"
+    },
+    "case2": {
+      "username": "locked_out_user",
+      "password": "secret_sauce"
+    },
+    "case3": {
+      "username": "problem_user",
+      "password": "secret_sauce"
+    }
+  },
+  "PracticeDomeLoginTestData": {
+    "case1": {
+      "username": "practice",
+      "password": "SuperSecretpassword!",
+      "message": "You logged into a secure area!"
+    },
+    "case2": {
+      "username": "practice",
+      "password": "Secretpassword!",
+      "message": "Your password is invalid!"
+    },
+    "case3": {
+      "username": "practice!",
+      "password": "SuperSecretpassword!",
+      "message": "Your username is invalid!"
+    }
+  },
+  "LumaDomeLoginTestData": {
+    "email": "luma1710926450945@gmail.com",
+    "password": "Luma1710926450945",
+    "message": "Thank you for registering with Main Website Store.",
+    "title": "My Account",
+    "deleteMessage": "You have no items in your shopping cart."
+  }
+}
