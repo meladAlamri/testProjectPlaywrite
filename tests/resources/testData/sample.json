@@ -2,7 +2,7 @@
   "searchQuery": "Selenium WebDriver",
   "SoftAssertionsTestData": {
     "username": "student",
-    "password": "password123"
+    "password": "Password123"
   },
   "SauceDomeLoginTestData": {
     "case1": {
