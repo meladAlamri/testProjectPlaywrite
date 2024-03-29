@@ -1,5 +1,5 @@
 import {test, expect} from '@playwright/test';
-import * as data from './resources/testData/sample.json';
+import * as data from '../../tests/resources/testData/sample.json';
 
 ""
 /**
