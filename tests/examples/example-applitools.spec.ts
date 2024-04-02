@@ -11,7 +11,7 @@ import {
     Eyes,
     Target
 } from '@applitools/eyes-playwright';
-import conf from "../config";
+import conf from "../../config";
 
 export const USE_ULTRAFAST_GRID: boolean = true;
 // export const USE_ULTRAFAST_GRID: boolean = false;

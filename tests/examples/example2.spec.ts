@@ -1,6 +1,6 @@
 import {test, Page} from '@playwright/test';
-import {HomePage} from '../Pages/home-page';
-import {TopMenuPage} from "../Pages/top-menu-page";
+import {HomePage} from '../ui/pages/home-page';
+import {TopMenuPage} from "../ui/pages/top-menu-page";
 
 //AAA
 //POM
